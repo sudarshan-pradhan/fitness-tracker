@@ -1,0 +1,17 @@
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul.li.a {
+    color: white;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+a:hover, a:active {
+    color: lightgray;
+}
