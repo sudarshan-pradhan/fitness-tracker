@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,6 +13,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { TrainingComponent } from './training/training.component';
 import { CurrentTrainingComponent } from './training/current-training/current-training.component';
 import { AppRoutingModule } from './app-routing.module';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -28,7 +30,10 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     NoopAnimationsModule,
     MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
