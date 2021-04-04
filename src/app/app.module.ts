@@ -13,9 +13,12 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { TrainingComponent } from './training/training.component';
 import { CurrentTrainingComponent } from './training/current-training/current-training.component';
 import { AppRoutingModule } from './app-routing.module';
-import {FlexLayoutModule} from "@angular/flex-layout";
+import { FlexLayoutModule } from "@angular/flex-layout";
 import { HeaderComponent } from './navigation/header/header.component';
 import { SideNavComponent } from './navigation/side-nav/side-nav.component';
+import { StopTrainingComponent } from './training/current-training/stop-training/stop-training.component';
+import { AuthService } from './auth/auth.service';
+import { TrainingService } from './training/training.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { SideNavComponent } from './navigation/side-nav/side-nav.component';
     NewTrainingComponent,
     PastTrainingsComponent,
     HeaderComponent,
-    SideNavComponent
+    SideNavComponent,
+    StopTrainingComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,11 @@ import { SideNavComponent } from './navigation/side-nav/side-nav.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    AuthService,
+    TrainingService
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [StopTrainingComponent],
 })
 export class AppModule { }

@@ -1,1 +1,9 @@
-<p>training works!</p>
+<mat-tab-group *ngIf="!currentTrainingActive">
+    <mat-tab label="New training"> 
+        <app-new-training (exercise)="startTraining()"></app-new-training>
+    </mat-tab>
+    <mat-tab label="Past training">
+        <app-past-trainings></app-past-trainings>
+    </mat-tab>
+</mat-tab-group>
+<app-current-training *ngIf="currentTrainingActive" (trainingExit)="currentTrainingActive=false"></app-current-training>
